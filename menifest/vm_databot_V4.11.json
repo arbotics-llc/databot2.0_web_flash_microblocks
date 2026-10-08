@@ -6,6 +6,7 @@
   "builds": [
     {
       "chipFamily": "ESP32",
+      "erase": true,
       "parts": [
         {
           "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/bootloader_dio_40m.bin",
