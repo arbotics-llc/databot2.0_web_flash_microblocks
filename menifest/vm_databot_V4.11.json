@@ -2,12 +2,27 @@
   "name": "databot2.0 Microblocks",
   "version": "V4.11",
   "home_assistant_domain": "databot",
-  "new_install_prompt_erase": false,
+  "new_install_prompt_erase": true,
   "builds": [
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/vm_databot_V4.11.bin", "offset": 0 }
+        {
+          "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/bootloader_dio_40m.bin",
+          "offset": 4096
+        },
+        {
+          "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/partitions.bin",
+          "offset": 32768
+        },
+        {
+          "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/boot_app0.bin",
+          "offset": 57344
+        },
+        {
+          "path": "https://raw.githubusercontent.com/arbotics-llc/databot2.0_web_flash_microblocks/main/Fw/vm_databot_V4.11.bin",
+          "offset": 65536
+        }
       ]
     }
   ]
